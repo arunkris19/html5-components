@@ -7,8 +7,8 @@ body {
   align-items: center;
 
   --highlight-color:#1f96f8;
-  --component-theme:#535353;
-  --component-nob:#353535;
+  --component-theme:#555555;
+  --component-nob:#323232;
 }
 
 .switch{
