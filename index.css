@@ -5,15 +5,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  --highlight-color:#1f96f8;
+  --component-theme:#535353;
+  --component-nob:#353535;
 }
 
 .switch{
-    display:inline-block;
+    display:block;
     width:80px;
     height:40px;
-    background-color: #323232;
+    background-color: var(--component-theme);
     border-radius: 24px;
-    border:1px solid #3f3f3f;
     position: relative;
     overflow: hidden;
 }
@@ -22,28 +25,26 @@ body {
     visibility: hidden;
 }
 .switch input + span{
-    /*highlight span*/
     display: inline-block;
     width:100%;
     height: 100%;
-    background-color: #4d4d4d;
+    background-color: transparent;
     transition: background-color 0.2s ease-out;
 }
 .switch input:checked + span{
-    background-color: #00cf8f;
+    background-color: var(--highlight-color);
 }
 .switch input + span + span{
-    /* nob */
-    display: inline-block;
+    display: block;
     width:36px;
     height: 36px;
     margin:2px;
-    background-color: #323232;
+    border-radius: 24px;
     position: absolute;
+    z-index:4;
+    background-color: var(--component-nob);
     left:0;
     top:0;
-    z-index: 2;
-    border-radius: 24px;
     transition: left 0.2s ease-out;
 }
 .switch input:checked + span + span{
